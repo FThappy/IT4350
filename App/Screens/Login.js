@@ -24,7 +24,7 @@ const Login = ({ navigation }) => {
         end={{ x: 0, y: 0 }} // Điểm kết thúc ở bên trái (x: 0)
       >
         <Animated.Image
-          entering={FadeInUp.delay(200).duration(1000).springify()}
+          entering={FadeInUp.delay(300).duration(1000).springify()}
           style={styles.image}
           accessibilityLabel="User Image"
           source={{
@@ -53,7 +53,7 @@ const Login = ({ navigation }) => {
           </LinearGradient>
         </TouchableOpacity>
         <Text style={styles.text1}>Forgot Password?</Text>
-        <Text style={styles.text2}>───────────────OR───────────────</Text>
+        <Text style={styles.text2}>OR</Text>
         <TouchableOpacity
           style={styles.button2}
           onPress={() => navigation.push("Signin")}
@@ -128,7 +128,6 @@ const styles = StyleSheet.create({
   },
   text2: {
     height: 20,
-    width: 310,
     color: "#A9A9A9",
     fontFamily: "raleway_bold",
     fontWeight: "bold",
@@ -142,7 +141,7 @@ const styles = StyleSheet.create({
     borderColor: "#384CFF",
     borderRadius: 12,
     borderWidth: 2,
-    marginTop: 40,
+    marginTop: 20,
     marginBottom : 20,
   },
 });

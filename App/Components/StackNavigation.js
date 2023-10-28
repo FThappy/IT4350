@@ -4,13 +4,14 @@ import TabNavigation from "./TabNavigation";
 import Login from "../Screens/Login";
 import Signin from "../Screens/Signin";
 import AccessRegister from "../Screens/AccessRegister";
+import StarUp from "../Screens/StarUp";
 
 
 const Stack = createNativeStackNavigator();
 
 const MainStack = () => {
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="StarUp">
       <Stack.Screen
         name="AccessRegister"
         component={AccessRegister}
@@ -24,6 +25,11 @@ const MainStack = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        component={StarUp}
+        name="StarUp"
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
